@@ -22,9 +22,9 @@ function sendMessage() {
     $messageInput.val('');
 }
 
-function showNewMessages({ payload }) {
+function showNewMessages({ payload: {username, message} }) {
     const $message = $(`<div>
-                            ${payload.username}: ${payload.message}
+                            ${username}: ${message}
                         </div>`);
     $register.append($message);
 }
