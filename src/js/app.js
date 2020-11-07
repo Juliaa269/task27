@@ -15,12 +15,16 @@ $('#chatForm').on('submit', (e) => {
     sendMessage();
 });
 
+chat.startApp();
+
 function sendMessage() {
     chat.send($senderInput.val(), $messageInput.val());
     $messageInput.val('');
 }
 
 function showNewMessages({ payload }) {
-    const $message = $(`<div>${payload.username}: ${payload.message}</div>`);
+    const $message = $(`<div>
+                            ${payload.username}: ${payload.message}
+                        </div>`);
     $register.append($message);
 }
