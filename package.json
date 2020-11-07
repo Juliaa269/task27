@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
     "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   },
   "author": "Yuliia Belaya",
   "license": "ISC",
